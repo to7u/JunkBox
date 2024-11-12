@@ -12,9 +12,9 @@ def load_values_from_file(filename):
 # Seleniumを使って動的ページのスクレイピング
 def scrape_with_selenium(url):
     # ChromeOptionsを設定してヘッドレスモードにする
-    # TODO ここの処理がうまく行っていない、ヘッドレスモードになっていない
     options = Options()
-    options.headless = True  # ヘッドレスモード（ブラウザを表示しない）
+    # options.headless = True  # ヘッドレスモード（ブラウザを表示しない）
+    options.add_argument("--headless")
     options.add_argument('--no-sandbox')  # 一部環境で必要
     options.add_argument('--disable-dev-shm-usage')  # 一部環境で必要
     driver = webdriver.Chrome(options=options)
