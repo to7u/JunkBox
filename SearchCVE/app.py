@@ -1,7 +1,7 @@
 
 from flask import *
 #追加------------
-from calculation_circle import calculation_circle
+
 from search_cve import main
 #------------------
 
