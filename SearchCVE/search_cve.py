@@ -33,14 +33,14 @@ def scrape_with_selenium(url):
 def main(cve):
     # formから送信された値をから配列を作成
     values = load_values_from_form(cve)
-    print(cve)
+    # print(cve)
     content = ""
     for value in values:
-        url = f"https://access.redhat.com/security/cve/{value}"
+        url = f"https://access.redhat.com/security/cve/{value}\n"
         content += url
         print(url)
         content += scrape_with_selenium(url)
-        print(content)
+        # print(content)
         content += "\n==================\n"
     return content
 
